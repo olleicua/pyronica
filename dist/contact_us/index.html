@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>pyronica</title>
+</head>
+<body>
+  <div class="headers">
+    <img class="logo" alt="Pyronica Logo" src="/images/Pyronica_logo_text.jpg" />
+  </div>
+  <div class="navigation">
+    <a href="/">Intro</a>
+    <a href="/about/">About</a>
+    <a href="/media_gallery/">Gallery</a>
+    <a href="/how_it_works/">How it works</a>
+    <a href="/contact_us/">Contact us</a>
+  </div>
+  <script>
+    const activeLink = document.querySelector(`.navigation a[href="${location.pathname}"]`);
+    if (activeLink) { activeLink.classList.add('active'); }
+  </script>
+  <div class="content">
+    TODO
+  </div>
+  <div class="footer">
+    <img class="logo" alt="Pyronica Logo" src="/images/Pyronica_logo_flame.jpg" />
+  </div>
+</body>
+</html>
