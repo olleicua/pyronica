@@ -1,0 +1,36 @@
+.gallery {
+  display: block;
+  margin: 4rem auto;
+  width: 97%;
+  max-width: 750px;
+  text-align: center;
+}
+
+.gallery .hero {
+  max-width: 100%;
+  margin-bottom: 15px;
+  height: min(560px, calc(72.75vmin - 3em));
+}
+
+.gallery .thumbnails {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 3%;
+  justify-content: center;
+}
+
+.gallery .thumbnails img {
+  box-sizing: border-box;
+  max-width: 22%;
+  height: min(120px, calc(16vmin - 0.66em));
+}
+
+.gallery .thumbnails img.selected {
+  border: 3px solid #8c1a11;
+}
+
+.gallery .thumbnails img.vertical {
+  margin-left: min(35px, 3vmin);
+  margin-right: min(35px, 3vmin);
+}

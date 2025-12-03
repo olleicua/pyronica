@@ -6,7 +6,7 @@ PAGES = {
   'index.html' => 'index.html',
   'about.html' => 'about/index.html',
   'media_gallery.html' => 'media_gallery/index.html',
-  'how_it_works.html' => 'how_it_works/index.html',
+  'get_involved.html' => 'get_involved/index.html',
   'contact_us.html' => 'contact_us/index.html',
 }
 
@@ -18,7 +18,7 @@ PAGES.each do |src_filename, dist_filename|
 
   src = File.read("src/#{src_filename}")
   indented_src = src.lines.map do |line|
-    "#{INDENT_CONTENT}#{line}"
+    line == "\n" ? line : "#{INDENT_CONTENT}#{line}"
   end.join('')
 
   dist = layout.sub("{{CONTENT}}\n", indented_src)

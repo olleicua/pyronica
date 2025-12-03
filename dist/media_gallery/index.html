@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/gallery.css">
 
     <title>pyronica</title>
 </head>
@@ -21,17 +24,60 @@
     <a href="/">Intro</a>
     <a href="/about/">About</a>
     <a href="/media_gallery/">Gallery</a>
-    <a href="/how_it_works/">How it works</a>
+    <a href="/get_involved/">Get involved</a>
     <a href="/contact_us/">Contact us</a>
   </div>
   <script>
-    const activeLink = document.querySelector(`.navigation a[href="${location.pathname}"]`);
+    const activeLink = document.querySelector('.navigation a[href="' + location.pathname + '"]');
     if (activeLink) { activeLink.classList.add('active'); }
   </script>
   <div class="content">
-    <h1>Gallery</h1>
-    
-    IMAGES AND MOVIES AND SUCH
+    <video
+      class="gallery-video"
+      poster="/images/intro_poster4.png"
+      controls
+      src="/videos/Gladiators.mov">
+    </video>
+
+    <video
+      class="gallery-video vertical"
+      controls
+      src="/videos/no_flame.mov">
+    </video>
+
+    <video
+      class="gallery-video"
+      controls
+      src="/videos/parking_lot_night_2.mov">
+    </video>
+
+    <script src="/gallery.js"></script>
+    <script>
+      appendGallery({
+        srcs: [
+          '/images/firefly_tent.jpg',
+          '/images/parking_lot.jpg',
+          '/images/smaller_pipe.jpg',
+          '/images/cooling.jpg',
+          '/images/tig.jpg',
+          '/images/dylan_wide.jpg',
+        ],
+        orientations: 'hhvvvh',
+        $previousElement: document.currentScript
+      });
+    </script>
+
+    <video
+      class="gallery-video"
+      controls
+      src="/videos/dylan.mov">
+    </video>
+
+    <video
+      class="gallery-video"
+      controls
+      src="/videos/parking_lot_night.mov">
+    </video>
   </div>
   <div class="footer">
     <img class="logo" alt="Pyronica Logo" src="/images/Pyronica_logo_flame.jpg" />

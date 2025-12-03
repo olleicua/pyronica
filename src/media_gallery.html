@@ -1,3 +1,46 @@
-<h1>Gallery</h1>
+<video
+  class="gallery-video"
+  poster="/images/intro_poster4.png"
+  controls
+  src="/videos/Gladiators.mov">
+</video>
 
-IMAGES AND MOVIES AND SUCH
+<video
+  class="gallery-video vertical"
+  controls
+  src="/videos/no_flame.mov">
+</video>
+
+<video
+  class="gallery-video"
+  controls
+  src="/videos/parking_lot_night_2.mov">
+</video>
+
+<script src="/gallery.js"></script>
+<script>
+  appendGallery({
+    srcs: [
+      '/images/firefly_tent.jpg',
+      '/images/parking_lot.jpg',
+      '/images/smaller_pipe.jpg',
+      '/images/cooling.jpg',
+      '/images/tig.jpg',
+      '/images/dylan_wide.jpg',
+    ],
+    orientations: 'hhvvvh',
+    $previousElement: document.currentScript
+  });
+</script>
+
+<video
+  class="gallery-video"
+  controls
+  src="/videos/dylan.mov">
+</video>
+
+<video
+  class="gallery-video"
+  controls
+  src="/videos/parking_lot_night.mov">
+</video>

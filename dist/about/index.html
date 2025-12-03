@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/gallery.css">
 
     <title>pyronica</title>
 </head>
@@ -21,21 +24,64 @@
     <a href="/">Intro</a>
     <a href="/about/">About</a>
     <a href="/media_gallery/">Gallery</a>
-    <a href="/how_it_works/">How it works</a>
+    <a href="/get_involved/">Get involved</a>
     <a href="/contact_us/">Contact us</a>
   </div>
   <script>
-    const activeLink = document.querySelector(`.navigation a[href="${location.pathname}"]`);
+    const activeLink = document.querySelector('.navigation a[href="' + location.pathname + '"]');
     if (activeLink) { activeLink.classList.add('active'); }
   </script>
   <div class="content">
-    <h1>
-      What is this project? What are the origins?
-    </h1>
-    
-    <p>
+    <h1>What is this project? What are the origins?</h1>
+
+    <img class="float-right" style="width: 200px;" src="/images/dave_and_organ.jpg" alt="Dave and the Organ" />
+
+    <p class="prose">
       This all began in 2020, our visionary, Dave, decided to tackle this project as his COVID project. More details about why. Since then he has modified it from vertical to horizonatal and added more octaves to the instrument. More details about what has changed over the years, the goals, etc.
     </p>
+
+    <p class="prose">
+      How did I come up with this idea?  How did we get here?  I'm glad you asked!
+    </p>
+
+    <p class="prose">
+      I had never heard of a fire organ, had no idea that people had been trying to make these for decades.  Which is a good thing, since I probably would have concluded it's impossible to make them sound good.
+    </p>
+
+    <p class="prose">
+      I had been reading William Gurstelle's excellent book, "The Practical Pyromaniac" [insert Amazon affiliate link here] and made a basic poofer.  When I saw Lucy Hosking's art car, Satan's Calliope, on YouTube, I was gob smacked.  How cool is that! And, why not make a real musical instrument?  Little did I know ...
+    </p>
+
+    <img class="float-left" style="width: 200px;" src="/images/the_practical_pyromaniac.jpg" alt="The Practical Pyromaniac Book" />
+
+    <p class="prose">
+      When COVID hit, I was primed, and needed a project to keep me as sane as I get.  So I decided to see if I could build that real musical instrument.  It took me a couple of months just to get a single pipe to sound.  After a couple more months, I had four pipes connected to doorbell switches.  It worked!  Well ... sort of.  This is about where I noticed the problem of inconsistent tuning that had plagued fire-organ makers all along: inconsistent pitch.  As a note plays, the pitch drops by about two semitones over about a second.  Not a melodious effect.  But why?
+    </p>
+
+    <p class="prose">
+      At first, I thought the problem was heating.  As the pipe heats up from the flame, it expands and the note drops.  I tried insulating it with fiberglass tape, and running water through a copper tube brazed to it to remove excess heat.  The result?  That wasn't the problem.  But I did stick a thermocouple to it and learned that the pipe heats up to about 400 degrees F (without active cooling).  And that there is a second order correlation between steady-state pitch and temperature.  I'm sure this will become useful eventually, but it isn't going to solve my sad clown sound.  Maybe the gas heats up and the speed of sound decreases?  No, sound propagates faster in hotter air.
+    </p>
+
+    <p class="prose">
+      I don't remember exactly how I realized that sound travels slower in propane than in air, but I remember looking it up and discovering that the speed of sound in propane is only 80% the speed of sound in air.  Aha!  As the pipe fills with propane and displaces air, the resonant frequency of the pipe drops.  When you stop playing the note, the propane drains out of the pipe and it starts all over again.
+    </p>
+
+    <img class="float-right" style="width: 200px;" src="/images/braze.jpg" alt="Braze" />
+
+    <p class="prose">
+      The first big improvement came when I rotated the pipes from vertical to horizontal and reduced the mouth size to about 90 degrees of circumference.  This helped a lot and confirmed that propane/air mixing is a major cause of the pitch drop.  At this point, I felt confident enough to expand from one octave to two.  That made a huge difference in what could be played, which made it clearer that the tuning problem was not completely solved.  You could definitely recognize the song being played, but the pitch still wandered enough to be a significant problem.
+    </p>
+
+    <p class="prose">
+      The next generation addressed two significant issues.  The gas supply manifold for the pipes was made from black iron pipe fittings, which included several dozen threaded joints.  Fire art safety inspectors were concerned that any of those joints might work loose and leak, so they required soap-bubble tests of every joint.  Plus it looked ghetto.  So, I learned to braze and brazed up a sleek set of manifolds, and powder-coated them to boot.  Nice!  The other issue was of course the continuing wandering pitch problem.  I addressed this by adding a small constant feed of propane into the midpoint of each pipe.  This made a big difference in the stability of the pitch, and musicians finally started liking it!
+    </p>
+
+    <video
+      class="gallery-video"
+      style="width: 85%; max-width: 350px;"
+      controls
+      src="/videos/pipe_mouth_flow.mov">
+    </video>
   </div>
   <div class="footer">
     <img class="logo" alt="Pyronica Logo" src="/images/Pyronica_logo_flame.jpg" />

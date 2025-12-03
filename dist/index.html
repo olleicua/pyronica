@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/gallery.css">
 
     <title>pyronica</title>
 </head>
@@ -21,20 +24,19 @@
     <a href="/">Intro</a>
     <a href="/about/">About</a>
     <a href="/media_gallery/">Gallery</a>
-    <a href="/how_it_works/">How it works</a>
+    <a href="/get_involved/">Get involved</a>
     <a href="/contact_us/">Contact us</a>
   </div>
   <script>
-    const activeLink = document.querySelector(`.navigation a[href="${location.pathname}"]`);
+    const activeLink = document.querySelector('.navigation a[href="' + location.pathname + '"]');
     if (activeLink) { activeLink.classList.add('active'); }
   </script>
   <div class="content">
     <video
-      poster="/images/intro_poster4.png"
       class="intro-video"
+      poster="/images/quandry_poster.jpg"
       controls
-      src="/videos/Gladiators.mov"
-      width="620">
+      src="/videos/quandry.mov">
     </video>
   </div>
   <div class="footer">
