@@ -30,6 +30,11 @@ p.prose {
   max-width: 900px;
 }
 
+a.yellow {
+  color: #ffea3f;
+  text-decoration: underline;
+}
+
 .paypal-button {
   display: block;
   margin: 1rem auto;
