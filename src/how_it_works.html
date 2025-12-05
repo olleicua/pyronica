@@ -1,0 +1,39 @@
+<p class="prose">
+  Pyronica is composed of two functional systems: the control system and the gas supply system.  These systems intersect at the solenoid valves that release propane into the pipes to voice them.  The organ is separated from the control station (and everything else) by a 10-foot safety perimeter, and from the fuel supply.  Then there's the pipes and how they are voiced with propane.  This is where the science is, since (afaik) nobody else has made a pipe organ that can successfully be played as a musical instrument.
+</p>
+
+<h2>Control System</h2>
+
+<p class="prose">
+  TL;DR: MIDI - Raspberry Pi - Python - I2C - relays - solenoid valves
+</p>
+
+<p class="prose">
+  The controls start with a MIDI note source.  This is usually a MIDI keyboard connected by USB to the control computer.  We started with a Bluetooth connection, but that got flaky with a crowd of people with Bluetooth phones in their pockets.  MIDI files are sometimes played for demonstration purposes.  "March of the Gladiators" has a good carnival feel about it.  Pyronica has also been played over the internet using RTP-MIDI, although the feedback for the person playing can get delayed.
+</p>
+
+<img class="always-center with-caption" style="width: 320px" src="/images/computer_box.jpg" />
+
+<p class="caption">
+  The control station computer box
+</p>
+
+<p class="prose">
+  The control computer (there's always a computer, isn't there?) is a Raspberry Pi running a short Python program that leverages the host's MIDI support for the source.  I wrote a MIDI "instrument" that converts the MIDI note on/off messages into I2C messages.  These messages are sent via a differential driver over an Ethernet cable to the organ control box with I2C relay boards.  These relays actuate the solenoid valves that allow the propane into the pipes.
+</p>
+
+<img class="always-center with-caption" style="width: 320px" src="/images/relay_box.jpg" />
+
+<p class="caption">
+  The organ control relay box
+</p>
+
+<h2>Gas Supply System</h2>
+
+<p class="prose">
+  With the addition of a third lower-note (bigger-pipe) octave, 20lb. barbecue grill tanks no longer cut it, and I had to move to 100lb. tanks.  Pyronica currently uses two 100-lb tanks, each heated with an 800W barrel heater to keep it from freezing up.  One tank supplies the upper two octaves; the other supplies the lower octave.  The propane is fed through two 40-foot hoses with 3/8 inch flare fittings.  (They're the best -- almost never leak!).
+</p>
+
+<p class="prose">
+  The upper two octave system is fed through a cascading pair of residential pressure regulators to deliver about 0.4 psi (8 inches w.c.) into the supply manifold.  The low-pressure regulator is limited to about 1.2 million BTU/hr, which turned out not to be enough to run all three octaves.  So the low octave is supplied separately with a larger low-pressure regulator.  This turned out to be a good thing, because the lower pipes needed to run at about double the manifold pressure of the higher octave.  This required replacing the pressure adjustment spring with a stiffer one.  These regulators feed manifolds that distribute the gas to the pipes and solenoid control valves.  The manifolds are custom brazed to how I wanted them, and powder-coated bright red.
+</p>

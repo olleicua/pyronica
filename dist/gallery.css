@@ -12,6 +12,10 @@
   height: min(560px, calc(72.75vmin - 3em));
 }
 
+.gallery .caption {
+  margin-top: -15px;
+}
+
 .gallery .thumbnails {
   width: 100%;
   display: flex;

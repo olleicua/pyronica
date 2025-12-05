@@ -48,6 +48,16 @@ html, body {
   margin: 0 1rem 0.7rem 0;
 }
 
+.always-center {
+  display: block;
+  float: none;
+  margin: 1rem auto;
+}
+
+.always-center.with-caption {
+  margin-bottom: 0;
+}
+
 h1, h2 {
   text-align: center;
 }
@@ -58,6 +68,16 @@ p.prose {
   margin-right: auto;
   width: 100%;
   max-width: 900px;
+}
+
+p.caption {
+  display: block;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
 }
 
 /* TOP */
@@ -127,7 +147,7 @@ a.yellow {
 
 .gallery-video {
   display: block;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 0 auto;
   width: 92%;
   max-width: 900px;
 }
