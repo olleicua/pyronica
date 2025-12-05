@@ -11,11 +11,41 @@ html, body {
   font-size: 20px;
 }
 
-.logo {
+/* LAYOUT */
+
+.top {
+  position: fixed;
+  height: 128px;
+  width: 100%;
+  top: 0;
+  background: #000000;
+}
+
+.content {
   display: block;
+  margin: 128px auto 1rem auto;
   width: 95%;
-  max-width: 300px;
-  margin: 0.5rem auto -0.5rem;
+  max-width: 1200px;
+}
+
+.footer {
+  display: block;
+  margin: 1rem auto;
+  width: 95%;
+  max-width: 1200px;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.float-right {
+  float: right;
+  margin: 0 0 0.7rem 1rem;
+}
+
+.float-left {
+  float: left;
+  margin: 0 1rem 0.7rem 0;
 }
 
 h1, h2 {
@@ -30,14 +60,13 @@ p.prose {
   max-width: 900px;
 }
 
-a.yellow {
-  color: #ffea3f;
-  text-decoration: underline;
-}
+/* TOP */
 
-.paypal-button {
+.logo {
   display: block;
-  margin: 1rem auto;
+  width: 95%;
+  max-width: 300px;
+  margin: 0.5rem auto -0.5rem;
 }
 
 .navigation {
@@ -66,6 +95,32 @@ a.yellow {
   text-decoration: underline
 }
 
+/* LINKS */
+
+a.yellow {
+  color: #ffea3f;
+  text-decoration: underline;
+}
+
+.paypal-button {
+  display: inline-block;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ffcc44;
+  color: #1d0a5e;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.paypal-button img {
+  display: inline-block;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+/* MEDIA */
+
 .intro-video {
   width: 100%;
 }
@@ -82,22 +137,7 @@ a.yellow {
   max-width: 600px;
 }
 
-.content {
-  display: block;
-  margin: 1rem auto;
-  width: 95%;
-  max-width: 1200px;
-}
-
-.footer {
-  display: block;
-  margin: 1rem auto;
-  width: 95%;
-  max-width: 1200px;
-  padding-top: 2.5rem;
-  padding-bottom: 5rem;
-  text-align: center;
-}
+/* UX */
 
 .notification {
   display: none;
@@ -148,37 +188,17 @@ a.yellow {
 }
 
 .contact-form textarea {
+  max-width: 95%;
   max-width: calc(100% - 1rem);
 }
 
-.float-right {
-  float: right;
-  margin: 0 0 0.7rem 1rem;
-}
+/* COMPATIBILITY */
 
-.float-left {
-  float: left;
-  margin: 0 1rem 0.7rem 0;
-}
+@media (max-width: 620px) {
+  .top {
+    position: absolute;
+  }
 
-.paypal-button {
-  display: inline-block;
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  background: #ffcc44;
-  color: #1d0a5e;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.paypal-button img {
-  display: inline-block;
-  height: 2rem;
-  vertical-align: middle;
-}
-
-@media (max-width: 450px) {
   .float-right,
   .float-left {
     display: block;
