@@ -20,6 +20,8 @@
 <p class="prose">We want to hear from you!  Let us know what you think, or ask a question.</p>
 
 <form class="contact-form" action="https://api.staticforms.dev/submit" method="POST">
+  <!-- Doc at https://www.staticforms.xyz/blog/implementing-altcha-captcha-html-website -->
+  <input type="hidden" name="apiKey" value="sf_113el0ie5m62d4ad1im1lj5f" />
   <p>
     <label for="name">Name:</label>
     <br />
@@ -43,7 +45,10 @@
   <script>
     document.querySelector('.redirect-to').value = 'https://' + location.host + '/contact_us/#thank-you';
   </script>
-
+    <!-- ALTCHA Widget -->
+    <altcha-widget
+      challengeurl="https://www.staticforms.xyz/api/altcha/challenge"
+      hidefooter="true"></altcha-widget>
   <p>
     <button type="submit">Send Message</button>
   </p>
