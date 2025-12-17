@@ -123,7 +123,7 @@ a.yellow {
   text-decoration: underline;
 }
 
-.paypal-button {
+.donate-button {
   display: inline-block;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
@@ -134,10 +134,17 @@ a.yellow {
   font-weight: bold;
 }
 
-.paypal-button img {
+.donate-button img {
   display: inline-block;
-  height: 2rem;
   vertical-align: middle;
+}
+
+.donate-button img.paypal {
+  height: 2rem;
+}
+
+.donate-button img.venmo {
+  height: 1rem;
 }
 
 /* MEDIA */
