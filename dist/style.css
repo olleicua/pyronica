@@ -19,11 +19,12 @@ html, body {
   width: 100%;
   top: 0;
   background: #000000;
+  z-index: 10;
 }
 
 .content {
   display: block;
-  margin: 128px auto 1rem auto;
+  margin: 143px auto 1rem auto;
   width: 95%;
   max-width: 1200px;
 }
