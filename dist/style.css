@@ -218,6 +218,7 @@ a.yellow {
 .contact-form textarea {
   max-width: 95%;
   max-width: calc(100% - 1rem);
+  resize: none;
 }
 
 .team-member {
